@@ -160,7 +160,7 @@ local FrameDrag = DraggableObject.new(MainFrame)
 
 FrameDrag:Enable()
 local includes = {
-	["pluginapi"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/LuaLighter/PEdit/main/include/pluginapi'))()",
+	["pluginapi"] = "_G.pluginapi = loadstring(game:HttpGet('https://raw.githubusercontent.com/LuaLighter/PEdit/main/include/pluginapi'))()",
 }
 local titletext = "PEdit"
 open.MouseButton1Click:Connect(function()
