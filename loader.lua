@@ -1,5 +1,5 @@
 setfenv(loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")), getfenv())()
-local ISEditor = Instance.new("ScreenGui")
+local PEdit = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local title = Instance.new("TextLabel")
@@ -21,12 +21,12 @@ local UICorner_9 = Instance.new("UICorner")
 
 --Properties:
 
-ISEditor.Name = "ISEditor"
-ISEditor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ISEditor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PEdit.Name = "PEdit"
+PEdit.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PEdit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = ISEditor
+MainFrame.Parent = PEdit
 MainFrame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 MainFrame.Position = UDim2.new(0.261587381, 0, 0.225752503, 0)
 MainFrame.Size = UDim2.new(0, 674, 0, 345)
@@ -40,7 +40,7 @@ title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1.000
 title.Size = UDim2.new(0, 674, 0, 33)
 title.Font = Enum.Font.Ubuntu
-title.Text = "ISEditor v1.1"
+title.Text = "PEdit"
 title.TextColor3 = Color3.fromRGB(127, 127, 127)
 title.TextScaled = true
 title.TextSize = 14.000
@@ -155,13 +155,13 @@ parse.TextWrapped = true
 UICorner_9.CornerRadius = UDim.new(0, 15)
 UICorner_9.Parent = parse
 
-local dragger = loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/ISEditor/main/drag.lua"))()
+local dragger = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaLighter/PEdit/main/drag.lua"))()
 local FrameDrag = DraggableObject.new(MainFrame)
 FrameDrag:Enable()
 local includes = {
-	["pluginapi"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinite-Store/ISEditor/main/include/pluginapi'))()",
+	["pluginapi"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/LuaLighter/PEdit/main/include/pluginapi'))()",
 }
-local titletext = "ISEditor v1.1.1"
+local titletext = "PEdit"
 open.MouseButton1Click:Connect(function()
 	if isfile(nameofplugin.Text .. ".iy") then
 		codebox.Text = readfile(nameofplugin.Text .. ".iy")
