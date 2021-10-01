@@ -155,7 +155,7 @@ parse.TextWrapped = true
 UICorner_9.CornerRadius = UDim.new(0, 15)
 UICorner_9.Parent = parse
 
-local dragger = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaLighter/PEdit/main/drag.lua"))()
+local DraggableObject = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaLighter/PEdit/main/drag.lua"))()
 local FrameDrag = DraggableObject.new(MainFrame)
 FrameDrag:Enable()
 local includes = {
